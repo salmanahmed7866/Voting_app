@@ -1,6 +1,7 @@
 const mongoose=require('mongoose');
 
-const mongooseUrl='mongodb://localhost:27017/voting'
+//const mongooseUrl='mongodb://localhost:27017/voting'
+const mongooseUrl='mongodb+srv://salmanahmed7866:salman7866@cluster0.x67s60h.mongodb.net/'
 
 mongoose.connect(mongooseUrl);
 
