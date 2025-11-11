@@ -23,6 +23,22 @@ routes.post('/signup', async (req, res) => {
 
 });
 
+routes.post("/addUser",async(req,res)=>{
+    try{
+const userData=req.body;
+    const user=new User(userData);
+    const response=await user.save();
+
+    res.status(200).json({response:response})
+    }
+    catch(err){
+    res.status(500).json({error:"internal server error"})
+
+    }
+    
+
+})
+
 routes.post('/login', async (req, res) => {
     try {
         const { cnicNo, password } = req.body;
